@@ -1,11 +1,10 @@
-//
 document.addEventListener('DOMContentLoaded', () => {
     const screen = document.getElementById('screen');
     const buttons = document.querySelectorAll('.key');
     const operators = document.querySelectorAll('.operator');
     const erasers = document.querySelectorAll('.eraser');
+    const animButtons = document.querySelectorAll('button');
     
-    // Agregar eventos para los botones de números
     buttons.forEach(button => {
         button.addEventListener('click', (event) => {
             const buttonValue = event.target.textContent;
@@ -14,19 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Agregar eventos para los botones de operadores
     operators.forEach(operator => {
         operator.addEventListener('click', (event) => {
             const operatorValue = event.target.textContent;
             if (operatorValue === '=') {
                 try {
-                    // Evaluamos la expresión en la pantalla y mostramos el resultado
                     screen.textContent = eval(screen.textContent);
                 } catch (error) {
                     screen.textContent = "Error";
                 }
             } else {
-                // Agregamos el valor del botón a la pantalla
                 screen.textContent += ` ${operatorValue} `;
             }
         });
@@ -43,6 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
+    animButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            button.classList.remove('active');  
+            void button.offsetWidth;  
+            button.classList.add('active');  
+        });
+    });
 });
-
-console.log(window.innerHeight)

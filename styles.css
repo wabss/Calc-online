@@ -3,25 +3,29 @@
     padding: 0px;
 }
 body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: #202829;
 }
 main{
     position: relative;
-    background-color: blue;
+    background-color: #5E6472;
     height: 85vh;
     width: 25vw;
     margin: 5vh;
     border-radius: 20px;
 }
 #screen{
+    align-items: center;
+    justify-content: center;
+    text-align: right;
     margin: 2vh;
     padding: 5vh;
     height: 3.9vh;
     background-color: aliceblue;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 /* Teclado */
 #keyboard{
@@ -31,15 +35,44 @@ main{
     width: 20vw;
 }
 .key{
+    background-color: #FAF3DD;
     padding: 4vh;
     margin: 0.5vh;
     width: 5vw;
-    border-radius: 8px;
+    border-radius: 20px;
     border: none;
     margin-bottom: 2vh;
 }
+button:hover{
+    filter: brightness(0.8);
+    animation: buttonAnim1 0.5s ease;
+}
+@keyframes buttonAnim1 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+button.active {
+    animation: buttonAnim 0.5s ease;
+}
 
-
+@keyframes buttonAnim {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
 /* Operadores */
 #arithmetic-operators{
     position: absolute;
@@ -51,13 +84,13 @@ main{
     margin-top: 0.4vh;
 }
 .operator{
+    background-color: #FAF3DD;
     margin-bottom: 2.5vh;
     padding: 4vh;
     border-radius: 8px;
     border: none;
 }
 /*Borradores*/
-
 .eraser{
     padding: 4vh;
     margin: 0.5vh;
@@ -65,5 +98,5 @@ main{
     border-radius: 8px;
     border: none;
     margin-bottom: 2vh;
-    background-color: yellow;
+    background-color: #FFA69E;
 }
