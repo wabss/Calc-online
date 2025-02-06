@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const eraserValue = event.target.textContent;
 
             if(eraserValue === 'AC'){
-                screen.textContent *= 0;
+                screen.textContent = "";
             } else {
                 let newtext = screen.textContent.slice(0, -1);
                 screen.textContent = newtext;
