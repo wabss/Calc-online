@@ -11,7 +11,7 @@ body{
 main{
     position: relative;
     background-color: blue;
-    height: 80vh;
+    height: 85vh;
     width: 25vw;
     margin: 5vh;
     border-radius: 20px;
@@ -19,6 +19,7 @@ main{
 #screen{
     margin: 2vh;
     padding: 5vh;
+    height: 3.9vh;
     background-color: aliceblue;
     border-radius: 8px;
 }
@@ -37,9 +38,8 @@ main{
     border: none;
     margin-bottom: 2vh;
 }
-#result{
-    width: 10.8vw;
-}
+
+
 /* Operadores */
 #arithmetic-operators{
     position: absolute;
@@ -55,4 +55,15 @@ main{
     padding: 4vh;
     border-radius: 8px;
     border: none;
+}
+/*Borradores*/
+
+.eraser{
+    padding: 4vh;
+    margin: 0.5vh;
+    width: 5vw;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 2vh;
+    background-color: yellow;
 }
