@@ -39,7 +39,7 @@ main{
     padding: 4vh;
     margin: 0.5vh;
     width: 5vw;
-    border-radius: 20px;
+    border-radius: 8px;
     border: none;
     margin-bottom: 2vh;
 }
@@ -87,4 +87,65 @@ button.active {
     border: none;
     margin-bottom: 2vh;
     background-color: #FFA69E;
+}
+@media (min-width: 360px) {
+    main {
+        width: 80vw;
+        height: 65vh;
+    }
+
+    #screen {
+        font-size: 5vw;
+    }
+
+    #keyboard {
+        height: 40vh;
+        width: 60vw;
+    }
+
+    .key {
+        padding: 4vh;
+        width: 5vw;
+        height: 5vh;
+        margin: 0.2vw;
+        margin-bottom: 0.2vh;
+    }
+    #arithmetic-operators{
+        position: absolute;
+        right: 0vh;
+        margin-top: 0vh;
+    }
+    .operator{
+        padding: 4vh;
+        width: 5vw;
+        height: 5vh;
+        margin: 0.2vw;
+        margin-bottom: 0.2vh;
+    }
+    .eraser{
+        padding: 4vh;
+        width: 5vw;
+        height: 5vh;
+        margin: 0.2vw;
+        margin-bottom: 0.2vh;
+    }
+}
+
+/* Cambios para pantallas grandes */
+@media (min-width: 1024px) {
+    main {
+        width: 25vw;
+        height: 85vh;
+    }
+
+    #screen {
+        font-size: 1.5vw;
+    }
+
+    .key {
+        padding: 4vh;
+        margin: 0.5vh;
+        width: 5vw;
+        margin-bottom: 2vh;
+    }
 }
