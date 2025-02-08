@@ -4,10 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const operators = document.querySelectorAll('.operator');
     const erasers = document.querySelectorAll('.eraser');
     const animButtons = document.querySelectorAll('button');
-    
+
     buttons.forEach(button => {
         button.addEventListener('click', (event) => {
             const buttonValue = event.target.textContent;
+            if(screen.textContent == 0){
+                screen.textContent = screen.textContent.slice(1);
+            }    
             
             screen.textContent += buttonValue;
         });
