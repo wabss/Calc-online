@@ -102,7 +102,9 @@ button.active {
         height: 40vh;
         width: 60vw;
     }
-
+    button{
+        transform: scale(0.8);
+    }
     .key {
         padding: 4vh;
         width: 5vw;
