@@ -8,13 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(button => {
         button.addEventListener('click', (event) => {
             const buttonValue = event.target.textContent;
-            if(screen.textContent == 0){
-                screen.textContent = screen.textContent.slice(1);
-            }    
-            
-            screen.textContent += buttonValue;
+    
+            if (screen.textContent === "Error" || screen.textContent === "Infinity") {
+                screen.textContent = buttonValue; 
+            } else {
+                if (screen.textContent === "0") {
+                    screen.textContent = "";
+                }
+                screen.textContent += buttonValue;
+            }
         });
     });
+    
 
     operators.forEach(operator => {
         operator.addEventListener('click', (event) => {

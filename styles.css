@@ -21,9 +21,6 @@ main {
 }
 
 #screen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: right;
     margin: 2vh;
     padding: 5vh;
@@ -131,6 +128,7 @@ button.active {
 
     #screen {
         font-size: 1.5vw;
+        text-align: right;
     }
 
     #keyboard {
