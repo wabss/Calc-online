@@ -113,6 +113,7 @@ button.active {
         height: 5vh;
         margin: 0.2vw;
         margin-bottom: 0.8vh;
+        font-size: 2vh;
     }
 
     #arithmetic-operators {

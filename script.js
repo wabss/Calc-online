@@ -19,12 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
-
     operators.forEach(operator => {
         operator.addEventListener('click', (event) => {
             const operatorValue = event.target.textContent;
+            const hasParentheses = screen.textContent.includes("(");
+    
             if (operatorValue === '=') {
+                if (hasParentheses) {
+                    screen.textContent = screen.textContent.replace("(", "*").replace(")", "");
+                }
                 try {
                     screen.textContent = eval(screen.textContent);
                 } catch (error) {
@@ -42,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if(eraserValue === 'AC'){
                 screen.textContent = "";
             } else {
-                let newtext = screen.textContent.slice(0, -1);
-                screen.textContent = newtext;
+                let newText = screen.textContent.slice(0, -1);
+                screen.textContent = newText;
             }
         })
     })
