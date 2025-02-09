@@ -91,17 +91,20 @@ button.active {
 /* Dispositivos móviles */
 @media (min-width: 360px) {
     main {
-        width: 80vw;
+        width: 90vw;
         height: 65vh;
+        margin: 0vh;
+        margin-top: 3vh;
     }
 
     #screen {
+        text-align: right;
         font-size: 5vw;
     }
 
     #keyboard {
-        height: 40vh;
-        width: 60vw;
+        height: 20vh;
+        width: 70vw;
     }
 
     .key, .operator, .eraser {
@@ -113,7 +116,6 @@ button.active {
     }
 
     #arithmetic-operators {
-        position: absolute;
         right: 0vh;
         margin-top: 0vh;
     }
