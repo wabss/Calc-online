@@ -89,7 +89,7 @@ button.active {
 /* Media Queries */
 
 /* Dispositivos móviles */
-@media (min-width: 360px) {
+@media (min-width: 330px) {
     main {
         width: 90vw;
         height: 65vh;
@@ -123,7 +123,7 @@ button.active {
 }
 
 /* Pantallas grandes */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     main {
         width: 25vw;
         height: 85vh;
