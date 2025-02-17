@@ -12,9 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     screen.textContent = buttonValue; 
                 } else if (buttonValue === "()") {
                     const apertura = (screen.textContent.match(/\(/g) || []).length;  
-                    const cierre = (screen.textContent.match(/\)/g) || []).length;  
+                    const cierre = (screen.textContent.match(/\)/g) || []).length;
+                    const lastInput = (screen.textContent.length - 1);  
                 
-                    if (apertura > cierre) {
+                    if(screen.textContent[lastInput] =="("){
+                        screen.textContent += "(";
+                    } else if (apertura > cierre) {
                         screen.textContent += ")";
                     } else {
                         screen.textContent += "(";
@@ -39,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     } catch (error) {
                         screen.textContent = "Error";
                     }
+                } else if (buttonValue === '%'){
+                    screen.textContent = eval(`${screen.textContent} / 100`);
                 } else {
                     screen.textContent += ` ${buttonValue} `;
                 }
