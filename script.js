@@ -10,6 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (button.classList.contains('key')) { // Si es un botón numérico o de texto
                 if (screen.textContent === "Error" || screen.textContent === "Infinity") {
                     screen.textContent = buttonValue; 
+                } else if (buttonValue === "()") {
+                    const apertura = (screen.textContent.match(/\(/g) || []).length;  
+                    const cierre = (screen.textContent.match(/\)/g) || []).length;  
+                
+                    if (apertura > cierre) {
+                        screen.textContent += ")";
+                    } else {
+                        screen.textContent += "(";
+                    }
                 } else {
                     if (screen.textContent === "0") {
                         screen.textContent = "";
@@ -23,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (buttonValue === '=') {
                     if (hasParentheses) {
-                        screen.textContent = screen.textContent.replace("(", "*").replace(")", "");
+                        screen.textContent = screen.textContent.replace(/\(/g, "*").replace(/\)/g, "");
                     }
                     try {
                         screen.textContent = eval(screen.textContent);
