@@ -4,51 +4,65 @@
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #202829;
+    background-color: #272727; /* Fondo más suave */
 }
 
 main {
     position: relative;
-    background-color: #5E6472;
+    background-color: #F9E5EC; /* Fondo del main más suave y claro */
     height: 85vh;
     width: 25vw;
     margin: 5vh;
     border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
+
 
 #screen {
     text-align: right;
     margin: 2vh;
-    padding: 5vh;
-    height: 3.9vh;
-    background-color: aliceblue;
-    border-radius: 20px;
+    padding: 3vh;
+    height: 7vh;
+    background-color: #E9B7C3; /* Pantalla de color más suave */
+    border-radius: 15px;
+    font-size: 3.5vw;
+    color: #5B1F28; /* Color de texto más oscuro para contraste */
 }
 
 /* Teclado */
 #keyboard {
     position: absolute;
     left: 2.3vh;
-    height: 10vh;
+    height: 40vh;
     width: 20vw;
 }
 
 .key, .operator, .eraser {
-    background-color: #FAF3DD;
+    background-color: #F7C4D0; /* Botones con un color suave de rosa */
     padding: 4vh;
     margin: 0.5vh;
     width: 5vw;
     height: 5vh;
-    border-radius: 8px;
+    border-radius: 10px; /* Bordes más redondeados */
     border: none;
+    font-size: 2.5vh;
+    color: #5B1F28; /* Texto en un tono oscuro para legibilidad */
+    transition: transform 0.2s ease-in-out, background-color 0.2s, box-shadow 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
 }
 
-button:hover {
-    filter: brightness(0.8);
+.key:hover, .operator:hover, .eraser:hover {
+    background-color: #EFB7C3; /* Color ligeramente más oscuro en hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Más sombra para efecto de hover */
+    transform: translateY(-4px); /* Efecto de elevación al hacer hover */
+}
+
+.key:active, .operator:active, .eraser:active {
+    transform: translateY(2px); /* Efecto de presionar los botones */
 }
 
 button.active {
@@ -80,10 +94,13 @@ button.active {
 
 .operator {
     margin-bottom: 2.5vh;
+    background-color: #F0A8C5; /* Operadores con un color más cálido */
+    color: #5B1F28; /* Color del texto en tonos oscuros */
 }
 
 .eraser {
-    background-color: #FFA69E;
+    background-color: #F5A0B4; /* Botón de borrar en un tono más suave de rosa */
+    color: #fff;
 }
 
 /* Media Queries */
